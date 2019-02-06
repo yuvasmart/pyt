@@ -6,6 +6,6 @@ def roman(s):
                 int_val += rom_val[s[i]] - 2 * rom_val[s[i - 1]]
         else:
             int_val +=rom_val[s[i]]
-     return int_val
+            return int_val
 string = input("enter the roman")
 print(roman(string))

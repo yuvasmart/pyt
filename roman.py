@@ -6,7 +6,7 @@ def king(s):
                 inc += val[s[i]] - 2 * val[s[i - 1]]
         else:
                 inc += val[s[i]]
-    return inc
+                return inc
 print("enter the roman")
-str=input()
+str=input().upper()
 print(king(str))

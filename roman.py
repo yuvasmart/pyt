@@ -1,11 +1,13 @@
-def roman(s):
-    rom_val = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
-    int_val = 0
-    for i in range(len(s)):
-        if i > 0 and rom_val[s[i]] > rom_val[s[i - 1]]:
-                int_val += rom_val[s[i]] - 2 * rom_val[s[i - 1]]
+def  main():
+    rom=input().upper()
+    values={'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000}
+    output=0
+    for i in range(len(rom)):
+        if i > 0 and values[rom[i]] > values[rom[i-1]]:
+            output+=values[rom[i]]-2*values[rom[i-1]]
         else:
-            int_val +=rom_val[s[i]]
-            return int_val
-string = input("enter the roman")
-print(roman(string))
+            output += values[rom[i]]
+    print(output)
+
+if __name__ == '__main__':
+    main()

@@ -1,4 +1,4 @@
-def roman(s):
+def king(s):
     val = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     inc = 0
     for i in range(len(s)):
@@ -7,7 +7,6 @@ def roman(s):
         else:
                 inc += val[s[i]]
     return inc
-
-str=raw_input()
 print("enter the roman")
-print(roman(str))
+str=input()
+print(king(str))
